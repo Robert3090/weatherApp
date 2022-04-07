@@ -28,11 +28,9 @@ function App() {
       setIndicator('°C');
       setIsFarenheit(false);
     }else{
-      let farenheit = (temp*1.8) + 32;
-      let feelLikeFarenheit = (feelsLike*1.8) + 32;
 
-      setTemp(farenheit);
-      setFeelsLike(feelLikeFarenheit);
+      setTemp(((temp*1.8) + 32).toFixed(3));
+      setFeelsLike(((feelsLike*1.8) + 32).toFixed(3));
       setIndicator('°F');
       setIsFarenheit(true);
     }
@@ -49,7 +47,7 @@ function App() {
 
     function gestionError(err) {
       if(err.code === 1){
-        alert("no se pudo obtener la direccion");
+        alert("No se pudo obtener la dirección, tal vez necesites activar la ubicación del dispositivo y recargar");
       }
     }
 

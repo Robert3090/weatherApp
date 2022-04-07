@@ -17,3 +17,9 @@
 .pointer {
   cursor: pointer;
 }
+
+@media screen and (max-width: 576px) {
+  .textTemp {
+    font-size: 7em;
+  }
+}
